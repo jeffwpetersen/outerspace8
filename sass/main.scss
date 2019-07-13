@@ -1,0 +1,210 @@
+@import "vendor/normalize";
+@import "susy";
+@import "vendor/plumber";
+@import "breakpoint";
+@import "fonts";
+@import "font-awesome/font-awesome";
+@import "mixin";
+@import "base";
+@import "structure";
+@import "style";
+@import "nav";
+@import "sf_menu";
+@import "td_megamenu";
+@import "footer";
+@import "events_classes_activities";
+@import "box_style";
+@import "books";
+
+@import "baseline-grid";
+//@import "plugins/svg-grid" not working;
+
+
+.main-section {
+    //@include baseline-grid();
+}
+.site-width {
+  max-width: 1200px;
+  //@include baseline-grid();
+  //background: susy-svg-grid() no-repeat scroll;
+}
+
+html {
+  // set font size for responsive type
+  font-size: $base-font-size;
+  background-color: white;
+}
+
+body {
+  @include body-font;
+  font-family: $body-font;
+  text-rendering: optimizeLegibility;
+  position: relative;
+}
+
+.outerspace {
+  background-color: white;
+}
+
+main.main {
+  img {
+    /*
+* Need to address images that are to large...
+*/
+
+    width:auto;
+  }
+}
+
+#block-tabs {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  float: left;
+  clear: both;
+  nav.tabs {
+    .tabs.primary {
+      li {
+        background-color: white !important;
+      }
+    }
+  }
+}
+
+#block-kidsteensblogmenu {
+  float: right;
+  clear: both;
+  margin-top: 10px;
+  margin-right: 14px;
+  #kids_teens_link_main {
+    font-weight: bold;
+    margin-left: auto;
+    text-align: center;
+    font-size: 80%;
+    text-transform: uppercase;
+    color: #337ab4;
+    font-weight: bold;
+    position: relative;
+    clear: both;
+    a {
+      color: #337ab4;
+      text-decoration: none;
+      padding: 4px 13px;
+      margin: 4px;
+      display: block;
+      background-color: $theme-tint;
+      &:hover {
+        color: $theme-tint;
+        background-color: #a64123;
+      }
+    }
+
+    div {
+      background-color: transparent;
+      display: inline-block;
+    }
+    div + div {
+      display: inline-block;
+    }
+    .menu-search {
+      a {
+        color: $lime;
+        background-color: $lime;
+        &:hover {
+          color: #939c1f;
+          background-color: #939c1f;
+        }
+      }
+      img {
+        position: absolute;
+        top: 8px;
+        left: 9px;
+        display: block;
+      }
+    }
+    &:before {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+
+/*
+* in progress
+*/
+
+header {
+  //background-image: url("/images/img.jpg");
+  position: relative;
+  height: 130px;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: $theme-color;
+  text-align: center;
+  overflow: visible;
+  padding-bottom: $base-grid-height;
+  color: white;
+  //   @include baseline-grid();
+  #block-sitebranding {
+    position: absolute;
+    top: 55px;
+  }
+}
+
+
+.tb-megamenu.tb-megamenu-kclibrary-mega-menu {
+  position: relative;
+  top: -28px;
+}
+nav.breadcrumb {
+  position: relative;
+  top: -9px;
+  opacity: .5;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+h1.page-title {
+  text-transform: uppercase;
+  color: $theme-comp;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.columns {
+  background-color: gray;
+  border: solid 1px lightcoral;
+}
+
+blockquote {
+  @include plumber($baseline: $quote-baseline);
+  font-family: $quote-font;
+}
+
+@include breakpoint(100px) {
+
+}
+
+.background {
+  //background-color: $theme-light;
+}
+
+
+
+/*
+* Styleguide
+*/
+
+.margin-top {
+  margin-top: 1rem;
+}
+.margin-top-none {
+  margin-top: 0 !important;
+}
+

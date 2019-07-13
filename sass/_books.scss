@@ -1,0 +1,223 @@
+/********************************
+* BOOKS
+********************************/
+
+.node-book-list, .node-type-book, .node-type-book-list {
+  .field-name-body {
+    margin-bottom: 20px;
+  }
+  .ds-2col, .ds-1col {
+    padding-bottom: 60px !important;
+
+    .group-right {
+      padding-right: 0px !important;
+      h4 {
+        margin-top: 0px
+      }
+    }
+
+    .group-left { /*the right group, because flow. */
+      padding-left: 0px !important;
+      .field img {
+        width: 100% !important;
+        padding: 0px;
+        margin: 0px;
+      }
+    }
+  }
+}
+
+/************************************************************
+* context-books-page
+************************************************************/
+
+.context-books-page  {
+  #background-header {
+    height: 300px;
+    z-index: 1;
+  }
+  #block-block-22 { /* to compnsate for the alert box */
+    padding-bottom: 20px !important;
+    margin-bottom: 40px !important;
+    position: relative;
+  }
+  #content {
+    position: relative;
+    z-index: 1;
+  }
+  h1 {
+    background: url(../images/icons/icon-books.png) no-repeat left;
+    margin: 5px 0 20px 20px !important;
+    padding: 25px 0 0 100px !important;
+    height: 80px;
+	display:none;
+  }
+
+
+  .genres-list-carousel {
+    .list-book{
+      text-align: center;
+      width:178px;
+      border: solid 10px black !important;
+      a {
+        @include h3-font;
+        font-style: normal !important;
+        font-weight: bold;
+        line-height: 20px !important;
+        display: block;
+        margin-top: 10px !important;
+      }
+    }
+  }
+
+  .formats-list {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin-top: 40px;
+	.formats-list-text {
+		font-size: 23px;
+		text-align: left !important;
+		display: table-cell;
+		vertical-align: top;
+		padding-right: 20px;
+		text-align: center;
+      }
+    .formats-list-format {
+      @include h3-font;
+      display: table-cell;
+      vertical-align: top;
+	  text-align: center;
+	  font-weight:bold;
+	  padding-bottom:20px;
+      img {
+        width:100%;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		max-width:170px;
+		padding-bottom:5px;
+      }
+	  div {
+		  text-align:left;
+	  }
+      h3 {
+        text-align: left !important;
+        font-size: 1.4em !important;
+        margin-top: 0px;
+      }
+	  
+    }
+  }
+  .books-content {
+    .onehundred {
+      width:100%;
+    }
+  }
+  .book-page-search {
+	  margin:20px 0 0px 0;
+    .extra {
+	  padding: 5px;
+	  margin-bottom: 1rem;
+	  span {
+		color: #FFF;
+		text-transform: uppercase;
+		float: left;
+		font-weight: bold !important;
+		font-style: normal;
+		padding: 5px 10px;
+	  }
+	  .form-text {
+		border: solid 1px #a64123;
+		float: left;
+		margin-left: 10px;
+	  }
+	  form {
+		display: inline-block !important;
+	  }
+	  #search-submit {
+		margin-left: 10px !important;
+	  }
+	}
+	h2 {
+      @include h1-font;
+	  display:block;
+	  float:left;
+	  margin:5px 200px 0 0;
+	  font-weight:bold;
+	}
+  }
+  .easy-breadcrumb {
+	  color:#FFF;
+  }
+  #search-submit {
+        clear: none;
+        color: #FFF;
+        background-color: $theme-comp;
+        text-transform: uppercase;
+        font-size: 12px;
+        border: solid 1px #CCC;
+        border-radius: 4px;
+		text-indent:25px;
+		background-image: url(../images/icon-search-sm-wh.png);
+		background-repeat:no-repeat;
+		background-position:2px 2px;
+        &:hover {
+          opacity: .8;
+        }
+      }
+}
+
+.context-readers-services {
+  // sidebar is hidden in layouts
+  #background-header {
+    height: 240px;
+    background-color: #1f1f21;
+    z-index: 1;
+  }
+  #content {
+    position: relative;
+    z-index: 1;
+  }
+  .easy-breadcrumb {
+    color:#FFF;
+  }
+  .group-left {
+    float: right;
+    width: 65%;
+  }
+  .group-right {
+    float: right;
+    width: 30%;
+    padding-right: 5%;
+  }
+}
+
+  .horizontal-book-list-title {
+    margin-bottom: 10px;
+    .browse-link a {
+      font-size: 14px !important;
+      margin-left: 40px;
+      baseline-shift: 10px;
+    }
+  }
+
+.outlist ul {
+  line-height: 24px;
+  li {
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.node-type-book-group {
+  .field-name-field-location, .field-label {
+    font-weight: bold !important;
+  }
+  .group-details.field-group-div {
+    .field {
+      margin-bottom: 6px;
+    }
+  }
+}

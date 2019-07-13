@@ -1,0 +1,91 @@
+$_susy-defaults: (
+        'columns': susy-repeat(12),
+        'gutters': 2,
+        'spread': 'narrow',
+        'container-spread': 'narrow',
+        'svg-grid-colors': #e5ffff,
+);
+
+//$max-width-of-site-content: 1400px;
+
+/*
+* Breakpoints.
+*/
+
+$mobile: 1px 668px;
+$tween: 669px 1311px;
+$desktop: 1312px 1920px;
+$big: 1921px;
+
+/*
+* Plumber Sizing for baseline typography
+*/
+
+$base-font-size: 15px; // The font size set on the root html element.
+$base-grid-height: 1.6rem; // Plumber rem grid height
+
+/*
+*
+*  Base font size is 15px.
+*  Base grid height is 1.6rem or 24px
+*  Font size for plumber is a multiple of the base-grid-height
+*  Font size of 15px is 15/24 = .625
+*  Target font sizes using the  http://nowodzinski.pl/syncope/ settings using the 1.5 settings
+*  are the target font size in em/rem devided by base-grid-hight or 3.40em / 1.6 = 2.125
+*
+*/
+
+$base-line-height-px: ($base-font-size * $base-grid-height) / 1rem; // Visual Layout Grid height. Divide by to remove rem
+// In order to get your target font size, Set you line height and set font size as a fraction of grid height.
+
+
+$body-font: latoregular, "opensans", "Helvetica", "Arial", sans-serif;
+$body-baseline: 0.113000;
+
+$headline-font: latobold, "opensans_bold", "Helvetica", "Arial", sans-serif;
+$headline-baseline: .113000;
+
+$light-font: "latohairline";
+$light-font-baseline: 0.113;
+
+$quote-font: Georgia, serif;
+$quote-baseline: 0.151123;
+
+//
+// Plumber mixin for baseline adjustments.
+//
+
+@include plumber-set-defaults(
+        $grid-height: $base-grid-height,
+        $baseline: 0.113000, // https://jamonserrano.github.io/plumber-sass/baselines/
+        $font-size: .625, // or 15px/24px
+        $line-height: 1,
+        $leading-top: 1,
+        $leading-bottom: 1
+);
+
+
+/*
+* Colors
+*/
+
+$theme-color: #337ab4;
+$theme-dark: #05668D;
+$theme-darker: #083752;
+$theme-tint: #ebf2fa;
+$theme-comp: #a64123;
+$theme-comp-dark: #679436;
+$theme-gray: #545555;
+$border: #CCCCCC;
+$pink: #FF1493;
+$lime: #D6df22;
+
+$gray-1: #191919;
+$gray-2: #323232;
+$gray-3: #4c4c4c;
+$gray-4: #666666;
+$gray-5: #7f7f7f;
+$gray-6: #999999;
+$gray-7: #b2b2b2;
+$gray-8: #cccccc;
+$gray-9: #e5e5e5;

@@ -45,7 +45,7 @@
 #}
 <div class="outerspace">
     <header class="header section" role="banner">
-        <div class="max-width">
+        <div class="site-width">
             <div id="header-region" class="full-span">
                 {{ page.header }}
             </div>
@@ -59,7 +59,7 @@
     #}
 
     <nav class="section main-menu">
-        <div class="max-width">
+        <div class="site-width">
             <div class="full-span menu">
                 {{ page.navigation }}
                 {{ page.primary_menu }}
@@ -68,20 +68,20 @@
         </div>
     </nav>
     <section class="section highlighted">
-        <div class="max-width">
+        <div class="site-width">
             <div id="highlighted" class="full-span">
                 {{ page.highlighted }}
             </div>
             {% if page.help %}
                 <div id="help" class="full-span">
-                    {{ page.help }} No idea how to get the help info to show.
+                    {{ page.help }}
                 </div>
             {% endif %}
         </div>
     </section>
-    <section class="section page-main">
-        <div class="max-width">
-            {% if page.sidebar_first %}
+    <section class="section main-section">
+        <div class="site-width layout-container">
+            {% if page.sidebar_first|render|striptags('<img>')|trim|length %}
                 <aside id="sidebar-first" class="column sidebar first">
                     {{ page.sidebar_first }}
                 </aside>
@@ -96,7 +96,7 @@
                 </div>{# /.layout-content #}
             </main>
 
-            {% if page.sidebar_second %}
+            {% if page.sidebar_second|render|striptags('<img>')|trim|length %}
                 <aside id="sidebar-second" class="column sidebar second">
                     {{ page.sidebar_second }}
                 </aside>
@@ -105,7 +105,7 @@
     </section>
 </div>
 <footer class="section">
-    <div class="max-width">
+    <div class="site-width">
         {% if page.footer %}
             <div class="full-span" id="footer" role="contentinfo">
                 {{ page.footer }}

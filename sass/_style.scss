@@ -1,0 +1,218 @@
+@import "mixin";
+
+.outerspace, footer {
+  /*
+  * Keep the styles in a container so as not to override toolbar.
+  */
+
+  a {
+    color: $theme-color;
+    &:link {
+      color: $theme-color;
+    }
+    &:visited {
+      color: $theme-color;
+    }
+    &:hover {
+      color: $theme-comp;
+    }
+    &:active {
+      color: $theme-comp-dark;
+      text-decoration: solid;
+    }
+    text-decoration: none;
+  }
+
+  .white {
+    a {
+      color: white;
+      &:link {
+        color: white;
+      }
+      &:visited {
+        color: $gray-2;
+      }
+      &:hover {
+        color: $gray-7;
+      }
+      &:active {
+        color: $theme-comp-dark;
+        text-decoration: solid;
+      }
+      text-decoration: none;
+    }
+  }
+
+
+  h2, h3 {
+    color: #555555;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+  }
+
+  p {
+    @include body-font;
+    &:not(:last-of-type) {
+      //margin-bottom: 2rem;
+    }
+
+  }
+
+  .half-space p, p.half-space {
+    @include plumber(
+            $font-size: 1.5,
+            $line-height: 2,
+            $leading-top: 0,
+            $leading-bottom: 1
+    );
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5em;
+  }
+
+  /*
+  * MIXIN INCLUDE FONT DEFINITIONS
+  */
+
+  h1 {
+    @include h1-font;
+  }
+  h2 {
+    @include h2-font;
+  }
+  h3 {
+    @include h3-font;
+  }
+  h4 {
+    @include h4-font;
+  }
+
+  main.main {
+    ul {
+      @include plumber(
+              $grid-height: $base-grid-height,
+              $baseline: $body-baseline,
+              $font-size: .625,
+              $line-height: 1,
+              $leading-top: 0,
+              $leading-bottom: 1
+      );
+      li {
+
+      }
+    }
+  }
+
+  /*
+  * Font treatment
+  */
+
+  .lighter {
+    font-family: $light-font !important;
+    font-weight: 100 !important;
+    @include breakpoint($mobile) {
+      font-family: latolight !important;
+    }
+    @include breakpoint($tween) {
+      font-family: latolight !important;
+    }
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .center {
+    text-align: center !important;
+  }
+
+  .underline-text {
+    text-decoration: underline;
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  /*
+  * Padding Margin and position
+  */
+
+  .padding {
+    padding: 1rem;
+  }
+  .padding-top {
+    padding-top: 1rem;
+  }
+  .padding-bottom {
+    padding-bottom: 1rem;
+  }
+  .padding-left {
+    padding-left: 1rem;
+  }
+  .margin {
+    margin: 1rem;
+  }
+  .margin-top {
+    margin-top: 1rem;
+  }
+  .margin-bottom {
+    margin-bottom: 2rem !important;
+  }
+  .margin-left {
+    margin-left: 1rem;
+  }
+  .margin-bottom-none {
+    margin-bottom: 0px !important;
+  }
+
+
+  /*
+  * Color
+  */
+
+  .white {
+    color: #fff !important;
+    a {
+      color: #fff !important;
+    }
+  }
+
+  .black {
+    color: #000 !important;
+  }
+
+  .gray-1 {
+    color: $gray-1
+  }
+
+  .gray-2 {
+    color: $gray-2
+  }
+
+  .gray-3 {
+    color: $gray-3
+  }
+
+  .gray-4 {
+    color: $gray-4
+  }
+
+  .gray-5 {
+    color: $gray-5
+  }
+
+  .gray-6 {
+    color: $gray-6
+  }
+
+  .gray-7 {
+    color: $gray-7
+  }
+}
+

@@ -1,0 +1,175 @@
+/*
+* Typography
+*/
+
+// http://nowodzinski.pl/syncope/
+// In order to get your target font size, Set you line hight and set font size as a fraction of grid height.
+
+@mixin body-font {
+  @include plumber(
+          $grid-height: $base-grid-height,
+          $baseline: $body-baseline, // 0.158203,
+          $font-size: .625,
+          $line-height: 1,
+          $leading-top: 0,
+          $leading-bottom: 1
+  );
+}
+
+@mixin h1-font{
+  font-family: $headline-font;
+  @include plumber(
+          $grid-height: $base-grid-height,
+          $baseline: $headline-baseline, // https://jamonserrano.github.io/plumber-sass/baselines/
+          $font-size: 1.637 * 1.2, /// 2.125
+          $line-height: 2,
+          $leading-top: 0,
+          $leading-bottom: 1
+  );
+  @include breakpoint($mobile) {
+    @include plumber(
+            $grid-height: $base-grid-height,
+            $baseline: $headline-baseline,
+            $font-size: 1.637 * .5,
+            $line-height: 1,
+            $leading-top: 0,
+            $leading-bottom: 1
+    );
+  }
+  @include breakpoint($tween) {
+    @include plumber(
+            $grid-height: $base-grid-height,
+            $baseline: $headline-baseline,
+            $font-size: 1.637 * .7,
+            $line-height: 2,
+            $leading-top: 0,
+            $leading-bottom: 1
+    );
+  }
+  @include breakpoint($desktop) {
+    @include plumber(
+            $grid-height: $base-grid-height,
+            $baseline: $headline-baseline,
+            $font-size: 1.637, // target 3.40rem
+            $line-height: 2,
+            $leading-top: 0,
+            $leading-bottom: 1
+    );
+  }
+}
+
+@mixin h2-font {
+  font-family: $headline-font;
+  @include plumber(
+          $grid-height: $base-grid-height,
+          $baseline: $headline-baseline,
+          $font-size: 1.149 * 1.2,
+          $line-height: 4,
+          $leading-top: 0,
+          $leading-bottom: 1
+  );
+  @include breakpoint($mobile) {
+    @include plumber(
+            $grid-height: $base-grid-height,
+            $baseline: $headline-baseline,
+            $font-size: 1.149 * .55,
+            $line-height: 2,
+            $leading-top: 3,
+            $leading-bottom: 0
+    );
+  }
+  @include breakpoint($tween) {
+    @include plumber(
+            $grid-height: $base-grid-height,
+            $baseline: $headline-baseline,
+            $font-size: 1.149 * .7,
+            $line-height: 3,
+            $leading-top: 3,
+            $leading-bottom: 0
+    );
+  }
+  @include breakpoint($desktop) {
+    @include plumber(
+            $grid-height: $base-grid-height,
+            $baseline: $headline-baseline,
+            $font-size: 1.149,
+            $line-height: 2,
+            $leading-top: 0,
+            $leading-bottom: 1
+    );
+  }
+}
+
+
+@mixin h3-font {
+  @include plumber(
+          $grid-height: $base-grid-height,
+          $baseline: $headline-baseline,
+          $font-size: .956 * 1.5,
+          $line-height: 1,
+          $leading-top: 1,
+          $leading-bottom: 0
+  );
+  @include breakpoint($mobile) {
+    @include plumber(
+            $grid-height: $base-grid-height,
+            $baseline: $headline-baseline,
+            $font-size: .956 * .55,
+            $line-height: 2,
+            $leading-top: 1,
+            $leading-bottom: 0
+    );
+    margin-bottom: 0;
+  }
+  @include breakpoint($tween) {
+    @include plumber(
+            $grid-height: $base-grid-height,
+            $baseline: $headline-baseline,
+            $font-size: .956 * .7,
+            $line-height: 2,
+            $leading-top: 2,
+            $leading-bottom: 0
+    );
+  }
+  @include breakpoint($desktop) {
+    @include plumber(
+            $grid-height: $base-grid-height,
+            $baseline: $headline-baseline,
+            $font-size: .956,
+            $line-height: 1,
+            $leading-top: 1,
+            $leading-bottom: 0
+    );
+  }
+}
+
+@mixin h4-font {
+  @include plumber(
+          $grid-height: $base-grid-height,
+          $baseline: $headline-baseline,
+          $font-size: .625,
+          $line-height: 2,
+          $leading-top: 1,
+          $leading-bottom: 1
+  );
+  @include breakpoint($mobile) {
+    @include plumber(
+            $grid-height: $base-grid-height,
+            $baseline: $headline-baseline,
+            $font-size: .625,
+            $line-height: 2,
+            $leading-top: 0,
+            $leading-bottom: 0
+    );
+  }
+  @include breakpoint($tween) {
+    @include plumber(
+            $grid-height: $base-grid-height,
+            $baseline: $headline-baseline,
+            $font-size: .625,
+            $line-height: 2,
+            $leading-top: 1,
+            $leading-bottom: 0
+    );
+  }
+}

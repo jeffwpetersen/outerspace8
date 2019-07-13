@@ -4,15 +4,24 @@ outerspace.mobile:
   weight: 0
   multipliers:
     - 1x
-outerspace.narrow:
-  label: narrow
-  mediaQuery: 'all and (min-width: 560px) and (max-width: 850px)'
+outerspace.tween:
+  label: tween
+  mediaQuery: 'all and (min-width: 669px) and (max-width: 1311px)'
   weight: 1
   multipliers:
     - 1x
-outerspace.wide:
-  label: wide
-  mediaQuery: 'all and (min-width: 851px)'
+    - 2x
+outerspace.desktop:
+  label: desktop
+  mediaQuery: 'all and (min-width: 1312px) and (max-width: 1920px)'
   weight: 2
   multipliers:
     - 1x
+    - 2x
+outerspace.big:
+  label: big
+  mediaQuery: 'all and (min-width: 1921px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x

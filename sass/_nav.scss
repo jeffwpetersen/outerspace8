@@ -1,0 +1,37 @@
+.block.block-menu {
+  .menu_block_wrapper {
+    ul {
+      margin-top: 5px
+    }
+    ul {
+      padding: 0px;
+      margin: 0;
+      border-top: none;
+      li {
+        padding: 6px 0px;
+        border-top: none;
+        background-color: #fff;
+        border-bottom: solid 1px #CCC;
+        list-style: none;
+        text-transform: uppercase;
+      }
+      ul:first-child {
+        background-color: green;
+        margin-top: .5rem;
+        margin-left: 3px;
+        margin-bottom: .24rem;
+        li {
+          background-color: #FFF;
+          border-bottom: none;
+          list-style-image: url("../images/bullet_blue.png");
+          list-style-type: circle;
+          list-style-position: inside;
+          text-transform: none;
+        }
+      }
+    }
+    a.is-active {
+      color: black;
+    }
+  }
+}

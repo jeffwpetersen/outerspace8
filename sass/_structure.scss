@@ -1,0 +1,312 @@
+/*
+* Base structure
+*/
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.outerspace {
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-width {
+  max-width: 2620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  position: relative;
+}
+
+.section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+/*
+* Grid Structure
+*/
+.sidebar-first {
+  .main-section {
+    .layout-container {
+      //background: susy-svg-grid() no-repeat scroll;
+      display: grid;
+      grid-template-columns: repeat(12, 2fr);
+      grid-column-gap: 2rem;
+      //grid-auto-rows: 50px 350px 50px;
+      //grid-template-columns: 200px 1fr 200px;
+      //grid-template-rows: auto 1fr auto;
+      main {
+        grid-column: span 9;
+      }
+      aside {
+        grid-column: span 3;
+        //background: susy-svg-grid() no-repeat scroll;
+      }
+      @include breakpoint($mobile) {
+        display: flex;
+        flex-direction: column;
+      }
+      @include breakpoint($tween) {
+        .aside-first {
+          grid-column: span 12;
+          text-align: center;
+          padding-left: 20%;
+          padding-right: 20%;
+          border-bottom: solid 2px $pink;
+          p {
+            line-height: 2rem;
+          }
+        }
+        main {
+          grid-column: span 6;
+        }
+        .aside-second {
+          grid-column: span 6;
+        }
+      }
+      @include breakpoint($desktop) {
+        //border: solid 1px pink;
+      }
+      @include breakpoint($big) {
+        //border: solid 1px lime;
+      }
+    }
+  }
+}
+
+
+.sidebar-second {
+  .main-section {
+    .layout-container {
+      //background: susy-svg-grid() no-repeat scroll;
+      display: grid;
+      grid-template-columns: repeat(12, 2fr);
+      grid-column-gap: 2rem;
+      //grid-auto-rows: 50px 350px 50px;
+      //grid-template-columns: 200px 1fr 200px;
+      //grid-template-rows: auto 1fr auto;
+      main {
+        grid-column: span 9;
+      }
+      aside {
+        grid-column: span 3;
+        //background: susy-svg-grid() no-repeat scroll;
+      }
+      @include breakpoint($mobile) {
+        display: flex;
+        flex-direction: column;
+      }
+      @include breakpoint($tween) {
+        .aside-first {
+          grid-column: span 12;
+          text-align: center;
+          padding-left: 20%;
+          padding-right: 20%;
+          border-bottom: solid 2px $pink;
+          p {
+            line-height: 2rem;
+          }
+        }
+        main {
+          grid-column: span 6;
+        }
+        .aside-second {
+          grid-column: span 6;
+        }
+      }
+      @include breakpoint($desktop) {
+        //border: solid 1px pink;
+      }
+      @include breakpoint($big) {
+        //border: solid 1px lime;
+      }
+    }
+  }
+}
+
+.both-sidebars {
+  .main-section {
+    .layout-container {
+      display: grid;
+      grid-template-columns: repeat(12, 2fr);
+      grid-column-gap: 2rem;
+      main {
+        grid-column: span 6;
+      }
+      aside {
+        grid-column: span 3;
+      }
+      @include breakpoint($mobile) {
+        display: flex;
+        flex-direction: column;
+      }
+      @include breakpoint($tween) {
+        //border: solid 1px brown;
+      }
+      @include breakpoint($desktop) {
+        //border: solid 1px pink;
+      }
+      @include breakpoint($big) {
+        //border: solid 1px lime;
+      }
+    }
+  }
+}
+
+/*
+* Grid Layouts
+*/
+
+.one-three-one {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-column-gap: 2rem;
+  .first-item {
+    grid-column: 1;
+  }
+  .second-item {
+    grid-column: 2;
+  }
+  .third-item {
+    grid-column: 1;
+  }
+  @include breakpoint($mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+  @include breakpoint($tween) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.two-things {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 2rem;
+  align-items: flex-start;
+  .first-thing {
+    grid-column: 1;
+  }
+  .second-thing {
+    grid-column: 2;
+  }
+  @include breakpoint($mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.align-center {
+  height: 100vh;
+  align-items: center;
+}
+
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+  grid-gap: 4em 4em;
+  padding: 3em;
+  .grid-item {
+    img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+  @include breakpoint($mobile) {
+    padding: 0;
+  }
+  @include breakpoint($desktop) {
+    grid-template-columns: repeat(auto-fill, minmax(25%, 2fr));
+  }
+  @include breakpoint($big) {
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  }
+}
+
+/************************************************************
+* Galleries
+************************************************************/
+
+$susy-nested-gallery: (
+        gutter-position:before,
+);
+
+
+
+@include with-layout($susy-nested-gallery) {
+  .grid-of-2, .two-column-page {
+    @include container();
+    @include span(12 of 12);
+    .grid-item {
+      @include gallery(6 of 12);
+    }
+    margin-bottom: 1rem;
+  }
+
+  .grid-of-3 {
+    @include container();
+    @include span(12 of 12);
+    .grid-item {
+      @include gallery(4 of 12);
+    }
+    margin-bottom: 1rem;
+  }
+  .grid-of-4 {
+    @include container();
+    @include span(12 of 12);
+    .grid-item {
+      @include gallery(3 of 12);
+    }
+    margin-bottom: 1rem;
+  }
+  .grid-of-5 {
+    @include container();
+    @include span(10 of 10);
+    .grid-item {
+      @include gallery(2 of 10);
+    }
+    margin-bottom: 1rem;
+  }
+  .grid-of-6 {
+    @include container();
+    @include span(12 of 12);
+    .grid-item {
+      @include gallery(2 of 12);
+    }
+    margin-bottom: 1rem;
+  }
+}

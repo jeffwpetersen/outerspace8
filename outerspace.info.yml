@@ -18,3 +18,4 @@ regions:
   sidebar_first: First Sidebar
   sidebar_second: Second Sidebar
   footer: Footer
+  hidden: Hidden

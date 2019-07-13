@@ -1,0 +1,53 @@
+/*
+ * Footer
+ */
+footer {
+  background-color: #333;
+}
+
+#footer-container {
+  border-top: solid 20px white;
+  background-color: #333;
+  letter-spacing: 1px;
+}
+
+#footer {
+  color: #FFF;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 60px;
+  padding-top: 40px;
+  width: 1040px;
+  line-height: 25px;
+  a {
+    color: #fff;
+    text-decoration: underline;
+    &:hover {
+      color: $lime;
+    }
+  }
+
+  #footer_menu {
+    list-style: none outside url("../images/bullet_white.png");
+  }
+
+  .col_two {
+    text-align: center;
+  }
+  span.ext {
+    display: none;
+  }
+
+}
+#footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#kclib7_footer {
+  text-align: center;
+  img {
+    display: inline;
+    margin-top: 10px;
+  }
+}
